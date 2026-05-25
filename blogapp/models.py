@@ -8,6 +8,8 @@ class Blog(models.Model):
     body = models.TextField()
     writer = models.ForeignKey(User,on_delete=models.CASCADE)
     views = models.IntegerField()
+    image_path = models.TextField(blank=True,default="")
+    video_path = models.TextField(blank=True,default="")
 
 
     def __str__(self) -> str:
