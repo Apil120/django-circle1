@@ -3,7 +3,7 @@ from .models import Blog
 
 # Create your views here.
 def home(request):
-    blogs = Blog.objects.all()
+    blogs = Blog.objects.all().order_by("-created_at")
     return render(request, "index.html", {"blogs": blogs})
 
 def read_blog(request,id):
