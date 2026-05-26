@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <meta name="description" content="Log in to your account with your username and password.">
+</head>
+<body>
+    <main>
+        <h1>Login</h1>
+        <form id="login-form" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required autocomplete="username">
+            </div>
+            <br>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required autocomplete="current-password">
+            </div>
+            <br>
+            <div>
+                <button type="submit" id="login-submit">Login</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
